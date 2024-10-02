@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" id="input" />
+    </form>
+  </body>
+  <script>
+    let x = document.getElementById("input");
+
+    x.addEventListener("focus", myfucus);
+    x.addEventListener("blur", myblur);
+
+    x.addEventListener("change", mychange); //  if any change in the input ...the change event detect it.
+
+    x.addEventListener("input", myinput); //  same working  as a change event but difference  is that, in the change  event when we write something and  click any way than is detected the change event
+    //but in the input event we type something that  is trigered/detect
+
+    function myfucus() {
+      x.style.background = "yellow";
+    }
+
+    function myblur() {
+      x.style.background = "white";
+    }
+
+    function mychange(event) {
+      console.log(this.value);
+    }
+
+    function myinput(event) {
+      console.log(this.value);
+    }
+  </script>
+</html>

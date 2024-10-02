@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1st method of onclick -->
+    <!-- <button id="btn" onclick="myfun()">click me!</button> -->
+
+    <!-- 2nd  -->
+    <button id="btn">click me!</button>
+  </body>
+  <script>
+    let btn = document.getElementById("btn");
+
+    // <!-- 1st method of onclick -->
+    function myfun() {
+      alert("the button was clicked");
+    }
+
+    //2nd method of click function
+    btn.addEventListener("click", myfun);
+    //btn.addEventListener("contextmenu", myfun);  // for right click
+    // also    we  use :  dblclick,  mousedown, mouseup, mouseover
+  </script>
+</html>

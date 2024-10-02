@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function add(num) {
+      //     for (let i = 1; i <= 10; i++) {
+      //       document.write(`${num} x ${i} = ${num * i}`);
+      //       document.write("<br>");
+      //     }
+      //   }
+
+      //   add(2);
+      //   document.write("<br>");
+      //   add(4);
+
+      // using Arguments...............
+
+      function add() {
+        if (arguments.length == 0) {
+          document.write("no arguments pass !");
+        } else {
+          let sum = 0;
+          for (let i = 0; i < arguments.length; i++) {
+            sum = sum - arguments[i];
+          }
+          document.write(sum);
+          console.log(sum);
+        }
+      }
+
+      add();
+
+      document.write("<br>");
+      add(44, 55);
+
+      // immedietly  invoked function: for temperory use  cant occupaied memory
+
+      (function () {
+        console.log("hello");
+        alert("word");
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 10px 100px;
+      }
+      .wrapper {
+        width: 1200px;
+        margin: auto 0%;
+        border: solid rgb(179, 25, 25);
+      }
+      /* navbar */
+
+      .logo-c {
+        text-align: center;
+      }
+      #navUl {
+        background-color: rgb(173, 173, 224);
+        text-align: center;
+      }
+      ul li {
+        text-decoration: none;
+        list-style-type: none;
+        display: inline-flex;
+        padding: 20px;
+        font-size: x-large;
+      }
+      ul li a {
+        text-decoration: none;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 86%;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      img {
+        justify-content: center;
+        padding-left: 200px;
+      }
+      p {
+        /* justify-content: center; */
+        text-align: justify;
+      }
+
+      #colors-switch {
+        text-align: right;
+      }
+      .btn {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        border: solid gray;
+        border-radius: 50%;
+      }
+
+      #white {
+        background-color: white;
+      }
+
+      #green {
+        background-color: green;
+      }
+
+      #blue {
+        background-color: blue;
+      }
+
+      #black {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo-c">
+        <img src="./logo.png" alt="" id="logo" />
+      </div>
+
+      <div>
+        <ul id="navUl">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">QRT</a></li>
+        </ul>
+      </div>
+
+      <h1 class="text">About us</h1>
+      <img src="./devs-fixing-bug_1275912-63397.jpg" alt="" />
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ipsum
+        blanditiis a reprehenderit voluptas maiores, sequi laboriosam
+        consequuntur et nobis esse, ipsa modi assumenda ad perspiciatis error
+        tempore. Dolorum voluptas obcaecati libero rerum dolorem voluptate quae,
+        quos quisquam provident! Quam modi provident saepe aliquid, repellendus
+        eveniet quibusdam. Est, ducimus labore quia totam fugit recusandae?
+        Totam inventore vel nemo dolorum ratione. Quae ea ipsam voluptatum unde
+        quibusdam cumque quis accusamus accusantium doloribus magnam doloremque
+        facere quo, eius beatae porro, minus dicta modi animi! Accusantium,
+        laudantium maiores? Vitae odio quae aperiam consequuntur atque corporis
+        ea iusto qui natus vero obcaecati officiis quidem nostrum nam amet
+        facere pariatur assumenda, illum, sunt neque architecto error temporibus
+        expedita. Perspiciatis, a. Quia fugiat unde, aliquam consequatur
+        corrupti temporibus quas eos magnam distinctio vero ex ea, tempora
+        ducimus ab sint perspiciatis pariatur, tempore quae? Ea id voluptatum
+        dicta assumenda exercitationem, velit porro pariatur, magni rem sequi ut
+        deleniti dolores quaerat, praesentium ipsum placeat. Dolorem, modi,
+        neque necessitatibus sit soluta laboriosam deleniti minus ratione fugiat
+        provident veniam dolorum earum quasi adipisci, quae ipsa beatae rem
+        officiis tempora voluptatum fugit quidem dignissimos? Pariatur quibusdam
+        distinctio quidem perferendis nihil, praesentium a quis maxime?
+        Voluptatum dignissimos corrupti iusto labore tempora officiis quaerat
+        veritatis. Ipsum quia eveniet iure sunt voluptate at accusantium facere
+        libero maxime incidunt. Iure cupiditate nesciunt tempore voluptates nemo
+        eaque quam maxime accusantium similique sit qui libero voluptate,
+        quaerat dignissimos culpa neque, nihil voluptatem itaque consectetur ut
+        laboriosam rerum velit! Voluptates iure officia autem repudiandae
+        tenetur, distinctio aut et perspiciatis tempore enim nihil minus
+        delectus, hic molestias sit ipsum provident. Corrupti, earum? Odit odio
+        quia architecto nam unde ad nostrum. Nihil maxime alias consequatur
+        doloremque ut perspiciatis, dolore ipsa qui ipsum accusamus, quidem
+        magnam voluptatum expedita voluptas vitae molestias aliquid dolor libero
+        cupiditate repudiandae. Odio nisi qui id saepe quia dicta commodi neque
+        reiciendis sunt fugit, molestias vero doloremque inventore ullam, veniam
+        rem ipsa reprehenderit eos nulla similique harum. Non doloremque odio
+        iusto, dolore nemo aliquam sequi adipisci ullam quidem vero maiores
+        magni aspernatur inventore assumenda debitis obcaecati dolorem placeat
+        minus blanditiis voluptatem modi nisi, ex amet cupiditate. Natus aperiam
+        sint minus quo unde expedita dolorem temporibus officia explicabo
+        suscipit minima optio fugiat odio soluta impedit quia fugit, eveniet
+        modi adipisci corporis amet eius consequuntur. Quo porro cumque eveniet
+        repellendus, dolore nesciunt beatae voluptates tenetur enim dicta dolor
+        nostrum fuga, explicabo dignissimos officia est quia assumenda soluta
+        tempora voluptas!
+      </p>
+    </div>
+  </body>
+  <script>
+    // for sticky menu project4 working
+
+    let navUl = document.getElementById("navUl");
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset >= 82) {
+        console.log("ok");
+        navUl.classList.add("sticky");
+      } else {
+        navUl.classList.remove("sticky");
+        console.log("remove");
+      }
+    });
+  </script>
+</html>

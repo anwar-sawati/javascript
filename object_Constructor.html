@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // old method  of object
+      //   let Student = {
+      //     Name: "anwar",
+      //     from: "swat",
+      //     Age: 23,
+      //   };
+      //   console.log(Student);
+
+      // now we  use object contructor
+      function Student(Name, from, Age) {
+        this.Name = Name;
+        this.from = from;
+        this.Age = Age;
+      }
+
+      Student.prototype.nationality = "pakistani"; //if  we add  something  in  Student  in  object constructor  //than  we  use   prototype
+
+      var Student1 = new Student("azeem", "Rwp", 55);
+      var Student2 = new Student("Anwar", "bahrain", 23.6);
+
+      console.log(Student1);
+
+      console.log(Student2);
+    </script>
+  </body>
+</html>

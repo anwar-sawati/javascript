@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let book = ["math", "physics", "bio"];
+      book.push("urdu"); //   to add  new books
+
+      book.unshift("pashto"); //  to add  new  at the start
+      //book.pop(); //  to delete
+
+      book.splice(0, 3); //  to delete  the subject  from a  specific position:  1st parameter index and 2nd is count
+
+      //console.log(book);
+      1;
+      // using  loop
+
+      // let booklength = book.length;
+      // for (let i = 0; i < book.length; i++) {
+      //   console.log(`element of ${i} is ${book[i]}`);
+      // }
+
+      //   forEach loop
+
+      book.forEach(fu);
+
+      function fu(v) {
+        console.log(v);
+      }
+    </script>
+  </body>
+</html>

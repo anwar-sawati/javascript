@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    .slider-container {
+      position: relative;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 550px;
+    }
+
+    .caption {
+      font-size: x-large;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.507);
+      padding: 10px 15px;
+    }
+
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      color: black;
+      background-color: rgb(238, 236, 231);
+      padding: 10px 18px;
+      border-radius: 50%;
+      font-size: xx-large;
+      font-weight: bold;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .slide {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="slider-container">
+      <div class="slide">
+        <img src="Snapchat-1998884351.jpg" alt="" />
+        <div class="caption">caption text 1</div>
+      </div>
+
+      <div class="slide">
+        <img src="Snapchat-918715598.jpg" alt="" />
+        <div class="caption">caption text 2</div>
+      </div>
+
+      <div class="slide">
+        <img src="devs-fixing-bug_1275912-63397.jpg" alt="" />
+        <div class="caption">caption text 3</div>
+      </div>
+
+      <div class="slide">
+        <img src="logo.png" alt="" />
+        <div class="caption">caption text 4</div>
+      </div>
+
+      <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+      <span class="arrow next" onclick="controller(1)">&#10095;</span>
+    </div>
+  </body>
+
+  <script>
+    let flag = 0;
+
+    function controller(x) {
+      flag = flag + x;
+
+      slideshow(flag);
+    }
+    function slideshow(num) {
+      let slides = document.getElementsByClassName("slide");
+      console.log(slides);
+
+      if (num == slides.length) {
+        flag = 0;
+        num = 0;
+      }
+
+      if (num < 0) {
+        flag = flag.length - 1;
+        num = num.length - 1;
+      }
+      for (let y of slides) {
+        y.style.display = "none";
+      }
+
+      slides[num].style.display = "block";
+    }
+
+    slideshow(flag);
+  </script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 50px 400px;
+      }
+      h1 {
+        text-align: center;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        margin: 0%;
+      }
+
+      #textbox {
+        font-size: x-large;
+        height: 150px;
+        width: 538px;
+        background-color: antiquewhite;
+        border: solid rgb(18, 18, 19);
+      }
+
+      p {
+        background-color: darkgoldenrod;
+        font-size: x-large;
+        margin: 0%;
+
+        text-align: center;
+      }
+
+      p span {
+        font-weight: bold;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Word Counter</h1>
+    <textarea id="textbox"> </textarea>
+    <p><span id="char">0</span> character <span id="words">0</span> Word</p>
+  </body>
+
+  <script>
+    let textbox = document.getElementById("textbox");
+
+    textbox.addEventListener("input", function () {
+      let text = this.value;
+      let char = text.length;
+      document.getElementById("char").innerHTML = char;
+
+      text = text.trim(); //  remove space between start  and  end
+      let word = text.split(" "); //  split()    for  break the  word
+
+      //  filter():  is filter the extra  data
+      let cleanlist = word.filter(function (elm) {
+        return elm != "";
+      });
+      console.log(cleanlist);
+
+      document.getElementById("words").innerHTML = cleanlist.length;
+    });
+  </script>
+</html>

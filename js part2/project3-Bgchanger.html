@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 50px 100px;
+      }
+      .wrapper {
+        width: 1000px;
+        margin: auto 0%;
+        border: solid rgb(179, 25, 25);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      img {
+        justify-content: center;
+        padding-left: 200px;
+      }
+      p {
+        /* justify-content: center; */
+        text-align: justify;
+      }
+
+      #colors-switch {
+        text-align: right;
+      }
+      .btn {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        border: solid gray;
+        border-radius: 50%;
+      }
+
+      #white {
+        background-color: white;
+      }
+
+      #green {
+        background-color: green;
+      }
+
+      #blue {
+        background-color: blue;
+      }
+
+      #black {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="colors-switch">
+        <span class="btn" id="white" onclick="Bgchange('#ffffff')"></span>
+        <span class="btn" id="green" onclick="Bgchange('#088F8F')"></span>
+        <span class="btn" id="blue" onclick="Bgchange('#0000FF')"></span>
+        <span class="btn" id="black" onclick="Bgchange('#000000')"></span>
+      </div>
+
+      <h1 class="text">About us</h1>
+      <img src="./devs-fixing-bug_1275912-63397.jpg" alt="" />
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Of ficiis
+        cumque quisquam cupiditate delectus ipsam, doloremque, vel voluptate eum
+        a itaque eveniet voluptatem! Porro saepe cupiditate provident commodi,
+        iste vel illo quidem officia odio in sunt ratione tempora corporis totam
+        rerum eligendi? Harum omnis in mollitia fugiat vitae facere odit.
+        Doloribus tenetur, eius asperiores obcaecati eveniet officia maiores
+        quasi. Ducimus adipisci minus voluptatem. Deleniti recusandae delectus
+        dignissimos architecto modi fugiat natus amet tempore et nulla vel
+        aliquid atque facere ea esse dolor eum, deserunt aut optio culpa sint,
+        dicta itaque? Nostrum eius amet deleniti! Repellendus tempora possimus
+        esse pariatur dolor laboriosam neque, molestiae sit est impedit. Iusto
+        illo magni culpa eum ratione beatae rem hic accusantium veniam omnis
+        praesentium, facilis sint vel consequatur ex iure inventore aut non
+        alias blanditiis corrupti. Distinctio blanditiis earum architecto dolor
+        cumque sit vitae repudiandae ipsum nam expedita veniam et illo,
+        laudantium vel magni libero porro. Libero corrupti odit ratione illum
+        nobis adipisci, dicta error illo quos repellat. Voluptates doloremque
+        perspiciatis iure iste vero, possimus a non porro quasi architecto ipsa
+        optio nam odit rerum delectus? Sit, id quod sed alias blanditiis
+        obcaecati, sequi itaque ipsam possimus accusantium saepe magni accusamus
+        harum explicabo! Autem architecto totam recusandae dolores quam qui?
+        Assumenda quam quibusdam sequi sunt, dolores modi nesciunt delectus sint
+        laborum labore explicabo optio iste ipsum deleniti ab? Animi, aperiam?
+        Illum, esse tenetur quod fugiat ad pariatur beatae inventore? Numquam
+        atque eum vero neque incidunt? Incidunt, illum. Consequatur saepe vero
+        hic aliquam ab. Aspernatur delectus excepturi architecto, nihil libero
+        totam accusamus sint nostrum doloremque, consequuntur expedita facilis
+        quaerat eligendi ipsum quas deleniti doloribus perferendis vero, neque
+        temporibus voluptates blanditiis optio quis? A molestias repudiandae
+        laudantium pariatur est assumenda velit, in laborum expedita ea maiores?
+        Hic provident in quibusdam tempora adipisci natus temporibus placeat
+        odit, vitae porro?
+      </p>
+    </div>
+  </body>
+  <script>
+    function Bgchange(color) {
+      document.body.style.backgroundColor = color;
+
+      let txt = document.getElementsByClassName("text");
+      if (color == "#000000") {
+        for (let elm of txt) {
+          elm.style.color = "white";
+        }
+      } else {
+        for (let elm of txt) {
+          elm.style.color = "black";
+        }
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">google</button>
+    <button id="btn2">youtube</button>
+    <button id="btn3">close</button>
+  </body>
+
+  <script>
+    let url = "https://www.google.com.pk/";
+    let url2 = "https://youtube.com/";
+    let feature = "height=600, width=600";
+
+    let win; // for close window
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let btn3 = document.getElementById("btn3");
+
+    btn1.addEventListener("click", function () {
+      win = window.open(url, "google");
+    });
+
+    btn2.addEventListener("click", function () {
+      win = window.open(url2, "google", feature);
+    });
+
+    btn3.addEventListener("click", function () {
+      win.close();
+    });
+  </script>
+</html>

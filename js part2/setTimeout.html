@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">clear</button>
+  </body>
+
+  <script>
+    let btn = document.getElementById("btn");
+
+    // setTimeout(myfun, 3000);  // execute after 3second show the value of myfun
+
+    let t1 = setInterval(myfun, 2000); // execute of  after 2second again  and again
+
+    function myfun() {
+      console.log("Helo every one");
+    }
+
+    //  for stop after press button
+    btn.addEventListener("click", function () {
+      clearInterval(t1);
+    });
+
+    console.log(screen.height);
+  </script>
+</html>
